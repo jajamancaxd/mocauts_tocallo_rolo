@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Configuración</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+    }
+
+    header {
+      background-color: #ff6600;
+      color: white;
+      padding: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .btn-retroceso {
+      background: none;
+      border: none;
+      color: white;
+      font-size: 18px;
+      cursor: pointer;
+    }
+
+    .titulo {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    main {
+      padding: 20px;
+    }
+
+    .bloque {
+      margin-bottom: 20px;
+    }
+
+    .btn-desplegable {
+      background-color: white;
+      border: 1px solid #ccc;
+      padding: 10px;
+      width: 100%;
+      cursor: pointer;
+      text-align: left;
+      border-radius: 5px;
+    }
+
+    .sub-opciones {
+      display: none;
+      padding-left: 20px;
+      margin-top: 10px;
+    }
+
+    .sub-opciones button {
+      display: block;
+      margin-top: 8px;
+      padding: 8px;
+      width: 90%;
+      background-color: #eee;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .interruptor {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #eee;
+      padding: 8px;
+      border-radius: 5px;
+      margin-top: 10px;
+    }
+
+    .interruptor input {
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <button class="btn-retroceso" onclick="window.location.href='lugares-recomendados.html'">&#8592; Volver</button>
+  <span class="titulo">Configuración</span>
+</header>
+
+<main>
+  <div class="bloque">
+    <button class="btn-desplegable" onclick="toggle('perfil')">Configuración de Perfil</button>
+    <div class="sub-opciones" id="perfil">
+      <button onclick="window.location.href='confirmacion-usuario.html'">Cambiar contraseña</button>
+      <button onclick="window.location.href='confirmacion-usuario.html'">Cambiar correo</button>
+    </div>
+  </div>
+
+  <div class="bloque">
+    <button class="btn-desplegable" onclick="toggle('app')">Configuración de Aplicación</button>
+    <div class="sub-opciones" id="app">
+      <div class="interruptor">
+        <label>Ubicación</label>
+        <input type="checkbox" id="ubicacion" checked>
+      </div>
+      <div class="interruptor">
+        <label>Notificaciones</label>
+        <input type="checkbox" id="notificaciones" checked>
+      </div>
+    </div>
+  </div>
+</main>
+
+<script>
+  function toggle(id) {
+    const seccion = document.getElementById(id);
+    seccion.style.display = seccion.style.display === 'block' ? 'none' : 'block';
+  }
+</script>
+
+</body>
+</html>
