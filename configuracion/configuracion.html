@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perfil de Usuario</title>
+  <link rel="stylesheet" href="configuracion.css">
+</head>
+<body>
+  <header>
+    <span class="back">&#8592;</span>
+    <h1>Usuario</h1>
+    <span class="icon">&#128205;</span>
+  </header>
+
+  <main class="container">
+  <div class="logo-section">
+    <img src="logo.png" alt="Logo de la empresa" class="logo">
+  </div>
+
+  <div class="info-section">
+    <h2>Company</h2>
+    <p>Slogan Here</p>
+    <a href="mailto:micorreocompany@gmail.com">micorreocompany@gmail.com</a>
+
+    <div class="actions">
+      <button onclick="cambiarContrasena()">Cambiar contraseña</button>
+      <button onclick="cambiarCorreo()">Cambiar correo</button>
+    </div>
+
+    <div class="toggles">
+      <label>Ubicación
+        <input type="checkbox" checked>
+      </label>
+      <label>Notificaciones
+        <input type="checkbox" checked>
+      </label>
+    </div>
+  </div>
+</main>
+
+
+  <script src="configuracion.js"></script>
+</body>
+</html>
